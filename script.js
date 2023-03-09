@@ -13,3 +13,7 @@ elt.appendChild(newElt);
 // elt.removeChild(newElt); // Supprime l'élément newElt de l'élément elt.
 elt.replaceChild(document.createElement("article"), newElt); // Remplace l'éléement newElt par un nouvel élement de type article
 
+// Evenement.
+elt.addEventListener('click', function(){
+    elt.innerHTML ="C'est Cliqué !";
+});
