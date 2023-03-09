@@ -1,15 +1,9 @@
 let elt = document.getElementById('test1');
-elt.innerHTML = "<div>tytytry</div>";
+elt.innerHTML = "<ul><li>Element 1</li><li>Element 2</li><li>Element 3</li></ul>";
 
 //document.getElementsByClassName()
 //document.getElementsByTagName()
 
 const newElt = document.createElement("div");
-let elt = document.getElementById("main");
 
 elt.appendChild(newElt);
-
-const elt = document.getElementById('mon-lien');
-elt.addEventListener('click', fucntion() {
-    elt.innerHTML"C'est cliqué";
-});
