@@ -55,3 +55,17 @@ const couleurSerpiere = serpiereLocalStorage.couleur;
 // Afficher la couleur de la serpière dans la deuxième div
 const div2 = elt.getElementsByTagName("div")[1];
 div2.innerHTML = "La couleur de la serpière est " + couleurSerpiere;
+
+// Créer une input type name ( écrire dans l'input : remplir du texte ) 
+// quand on appuie sur un button submit ça va enregistrer dans local storage
+// Après créer un button 2 "display" qui va afficher le contenu du local storage
+// sur le html et vider le local storage.
+
+const nameInput = document.getElementById("name");
+const registerButton = document.getElementById("register");
+
+registerButton.addEventListener("click", function() {
+  const name = nameInput.value;
+  localStorage.setItem("nom", name);
+});
+
