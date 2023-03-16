@@ -79,6 +79,8 @@ removeData.addEventListener("click", function() {
     localStorage.clear();
 })
 
+//Recherche de paramètres dans un URL: 
+
 var str = "https://www.domain.com/page?name=francois1&id=opwiueru3920983r2&lastname=john";
 var url = new URL(str);
 var search_params = new URLSearchParams(url.search);
