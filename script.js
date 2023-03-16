@@ -61,11 +61,28 @@ div2.innerHTML = "La couleur de la serpière est " + couleurSerpiere;
 // Après créer un button 2 "display" qui va afficher le contenu du local storage
 // sur le html et vider le local storage.
 
+// Première partie d'enregistrement et récupérztion du prénom :
 const nameInput = document.getElementById("name");
 const registerButton = document.getElementById("register");
-
+console.log(registerButton)
 registerButton.addEventListener("click", function() {
   const name = nameInput.value;
-  localStorage.setItem("nom", name);
+  localStorage.setItem("name", name);
 });
 
+// Deuxième partie supprimer local storage en utilisant le bouton Display :
+
+const removeData = document.getElementById("display");
+console.log(removeData)
+const recup = document.getElementById("recup")
+removeData.addEventListener("click", function() {
+    localStorage.clear();
+})
+
+var str = "https://www.domain.com/page?name=francois1&id=opwiueru3920983r2&lastname=john";
+var url = new URL(str);
+var search_params = new URLSearchParams(url.search);
+if (search_params.has('name')){
+  var name = search_params.get('name');
+  console.log(name);
+}
